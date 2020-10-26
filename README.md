@@ -2,14 +2,28 @@
 
 User Management App for Bitex API
 
-* Ruby version
+Prerequisites
+The setups steps expect following tools installed on the system.
 
-> 2.4.3
+Github
+Ruby 2.4.3
+Rails 5.2.4.4
 
-* Database creation
+1. Check out the repository
 
-> rails db:migrate
+git clone git@github.com:santiagodiaz/user_management_bitex.git
 
-* How to run the app
+2. Run bundle
 
-> rails s
+bundle install
+
+3. Create and setup the database
+Run the following command to create the database.
+
+rails db:migrate
+
+3. Start the Rails server
+You can start the rails server using the command given below.
+
+bundle exec rails s
+And now you can visit the site with the URL http://localhost:3000
