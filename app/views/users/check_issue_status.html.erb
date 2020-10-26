@@ -1,0 +1,35 @@
+<% content_for :page_title, @user.issue_id %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title"> Issue Status: <%= @user.issue_status %></h1>
+    <div class="content">
+      <label>First name: <%= @user.first_name %></label>
+      <br>
+      <label>Last name: <%= @user.last_name %></label>
+      <br>
+      <label>Birth date: <%= @user.birth_date %></label>
+      <br>
+      <label>Gender: <%= @user.gender %></label>
+      <br>
+      <label>Id number: <%= @user.id_number %></label>
+      <br>
+      <label>Nationality: <%= @user.nationality %></label>
+      <br>
+      <label>City: <%= @user.city %></label>
+      <br>
+      <label>Country:<%= @user.country %></label>
+      <br>
+      <label>Floor: <%= @user.floor %></label>
+      <br>
+      <label>Postal Code: <%= @user.postal_code %></label>
+      <br>
+      <label>Street Address: <%= @user.street_address %></label>
+      <br>
+      <label>Street Number: <%= @user.street_number %></label>
+      <br>
+      <label>Issue id: <%= @user.issue_id %></label>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<% content_for :page_title,  "Users" %>
+
+<section class="section">
+  <div class="container">
+    <% @users.each do |user| %>
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4"> <%= link_to "#{user.first_name} #{user.last_name}", user %></p>
+            </div>
+          </div>
+          <div class="content">
+            <%= button_to "Check Issue Status", { action: "check_issue_status", user_id: user.id, issue_id: user.issue_id }, method: :get %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,78 @@
+<% content_for :page_title, "Create a new User" %>
+
+<div class="section">
+  <%= simple_form_for @user do |f| %>
+  <div class="field">
+    <div class="control">
+      <%= f.input :first_name, required: true, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :last_name, required: true, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :birth_date, required: true, as: :date, html5: true, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :gender, as: :radio_buttons, collection: [['female', 'Female'], ['male', 'Male']], label_method: :second, value_method: :first, :checked => ['female'], wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <label>Nationality: </label>
+      <%= f.country_select :nationality, required: true, priority_countries: ["AR", "BR", "CL"], input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :id_number, required: true, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :id_card_image, required: true, input_html: { class: 'input', type: 'file' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :country, required: true, priority_countries: ["AR", "BR", "CL"], input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :city, required: true, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :street_address, required: true, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :street_number, required: true, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :floor, required: true, input_html: { class: 'input', value: "0" }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :postal_code, required: true, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.input :proof_of_address, required: true, input_html: { class: 'input', type: 'file' }, wrapper: false, label_html: { class: 'label'} %>
+    </div>
+  </div>
+  <%= f.button :submit, 'Create a new User', class: "button is-primary" %>
+  <% end %>
+</div>
